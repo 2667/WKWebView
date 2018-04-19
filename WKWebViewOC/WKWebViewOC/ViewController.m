@@ -29,7 +29,7 @@
 
 - (IBAction)loadingAction:(UIButton *)sender {
     WKWebViewController *web = [[WKWebViewController alloc] init];
-    [web loadWebURLSring:@"https://www.baidu.com"];
+    [web loadWebURLSring:@"http://www.baidu.com"];
     [self.navigationController pushViewController:web animated:YES];
 }
 

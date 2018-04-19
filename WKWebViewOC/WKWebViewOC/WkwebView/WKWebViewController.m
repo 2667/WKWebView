@@ -60,6 +60,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     //添加右边刷新按钮
     UIBarButtonItem *roadLoad = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(roadLoadClicked)];
     self.navigationItem.rightBarButtonItem = roadLoad;
+    [self loadWebURLSring:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -139,9 +140,15 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 
 - (void)loadWebURLSring:(NSString *)string{
-    self.URLString = string;
+//    [web loadWebURLSring:@"http://www.baidu.com"];
+    NSString *urlString1 = @"http://www.baidu.com";
+//    self.URLString = string;
+//    self.loadType = loadWebURLString;
+    self.URLString = urlString1;
     self.loadType = loadWebURLString;
+    
 }
+
 
 - (void)loadWebHTMLSring:(NSString *)string{
     self.URLString = string;
